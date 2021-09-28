@@ -1,0 +1,129 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.topContainer {
+    height: 100vh;
+    width: 100vw;
+    background-color: #050A30;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+
+.text1 h3 {
+    position: relative;
+    font-size: 5vw;
+    color: #050A30;
+    -webkit-text-stroke: 0px #7EC8E3;
+}
+
+.text1 h3::before {
+    content: attr(data-text);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0%;
+    height: 95%;
+    color: #00ff6a;
+    -webkit-text-stroke: 0px #7EC8E3;
+    border-right: 0.1px solid #7EC8E3;
+    overflow: hidden;
+    animation: animateText 6s linear infinite;
+}
+
+@keyframes animateText {
+    0%, 100%{
+        width: 0%;
+    }
+
+    70% {
+        width: 100%;
+    }
+}
+
+.second {
+    height: 30vh;
+    width: 100vw;
+    background: #050A30;
+}
+
+.wrapper{
+    height: 30vh;
+    width: 100vw;
+    margin-left: 1em;
+    display: flex;
+    background: transparent;
+}
+
+.wrapper .static-txt{
+    color: #fff;
+    font-size: 30px;
+    font-weight: 400;
+    margin-left: 1em;
+}
+
+.wrapper .dynamic-txts{
+    margin-left: 1em;
+    height: 40px;
+    overflow: hidden;
+}
+
+.dynamic-txts li{
+    list-style: none;
+    color: #FC6D6D;
+    font-size: 40px;
+    font-weight: 500;
+    position: relative;
+    top: 0;
+    animation: slide 26s infinite;
+    animation-timing-function: ease-out;
+}
+
+@keyframes slide {
+    100%{
+        top: -1180px;
+    }
+}
+
+.dynamic-txts li span{
+    position: relative;
+    margin: 5px 0;
+}
+
+@media screen and (max-width: 480px) {
+    .text1 h3 {
+        position: relative;
+        font-size: 15vw;
+        color: #050A30;
+        -webkit-text-stroke: 0px #7EC8E3;
+    }
+}
+
+.link, .message {
+    text-align: center;
+    padding-left: 2.5em;
+    padding-right: 2.5em;
+    background-color: #050A30;
+    font-size: 20px;
+}
+
+.link p {
+    color: white;
+}
+
+a {
+    text-decoration: none;
+}
+
+.message {
+    text-align: center;
+    color: #fded06;
+}
+
+.message p{
+    font-size: 50px
+}
